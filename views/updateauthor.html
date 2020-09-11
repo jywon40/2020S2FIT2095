@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href ="/">Home</a></li>
+            <li><a href ="/addauthor">Add Author</a></li>
+            <li><a href ="/addbook">Add Book</a></li>
+            <li><a href ="/deletebook">Delete Book</a></li>
+            <li><a href ="/getauthors">List Authors</a></li>
+            <li><a href ="/getbooks">List Books</a></li>
+            <li><a href ="/updateauthor">Update Author</a></li>
+        </ul>
+        <form action= "/updateauthorpost" method="POST">
+            Author ID: <input type="text" name= "id"/></br>
+            Number of Books: <input type="number" name= "numBooks"/></br>
+            <button type = "submit">Update Author</button>
+        </form>
+    </body>
+</html>

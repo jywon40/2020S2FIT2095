@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href ="/">Home</a></li>
+            <li><a href ="/addauthor">Add Author</a></li>
+            <li><a href ="/addbook">Add Book</a></li>
+            <li><a href ="/deletebook">Delete Book</a></li>
+            <li><a href ="/getauthors">List Authors</a></li>
+            <li><a href ="/getbooks">List Books</a></li>
+            <li><a href ="/updateauthor">Update Author</a></li>
+        </ul>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Number of Books</th>
+            </tr>
+            <% for (let i=0; i< ar.length; i++){ %>
+                <tr>
+                    <td><%= (i+1) %></td>
+                    <td><%= ar[i].name.firstName+" "+ar[i].name.lastName %></td>
+                    <td><%= ar[i].dob %></td>
+                    <td><%= ar[i].address.unit+" "+ar[i].address.street+" "+ar[i].address.suburb+" "+ar[i].address.state%></td>
+                    <td><%= ar[i].numBooks%></td>
+                </tr> 
+            <% } %>
+        </table>
+    </body>
+</html>

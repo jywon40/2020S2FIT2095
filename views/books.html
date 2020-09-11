@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href ="/">Home</a></li>
+            <li><a href ="/addauthor">Add Author</a></li>
+            <li><a href ="/addbook">Add Book</a></li>
+            <li><a href ="/deletebook">Delete Book</a></li>
+            <li><a href ="/getauthors">List Authors</a></li>
+            <li><a href ="/getbooks">List Books</a></li>
+            <li><a href ="/updateauthor">Update Author</a></li>
+        </ul>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Date of Publication</th>
+                <th>Summary</th>
+            </tr>
+            <% for (let i=0; i< ar.length; i++){ %>
+                <tr>
+                    <td><%= (i+1) %></td>
+                    <td><%= ar[i].title %></td>
+                    <td><%= ar[i].author.name.firstName + " " + ar[i].author.name.lastName%></td>
+                    <td><%= ar[i].ISBN%></td>
+                    <td><%= ar[i].dateofPub %></td>
+                    <td><%= ar[i].summary %></td>
+                </tr> 
+            <% } %>
+        </table>
+    </body>
+</html>
